@@ -1,0 +1,180 @@
+@charset "utf-8";
+@import "bootstrap";
+/* ==================================
+common
+================================== */
+body {
+  background-color: #fcfcfc;
+}
+p {
+	line-height: 1.75em;
+}
+.margin-0auto {
+	margin: 0 auto;
+}
+.clear-both {
+	clear: both;
+}
+.pull-right {
+	margin: 0 0 1em 1em;
+}
+.pull-left {
+	margin: 0 1em 1em 0;
+}
+.require {
+	color: red;
+}
+ul {
+	list-style-type: none;
+	padding-left: 0;
+}
+dl {
+	dd {
+		margin-bottom: 15px;
+	}
+}
+.alignright {
+	margin: 0 0 1em 1em;
+	float: right !important;
+}
+.alignleft {
+	float: left !important;
+	margin: 0 1em 1em 0 ;
+}
+.well {
+	box-shadow: 0px 0px 6px #fcfcfc;
+	background-color: #fff;
+	border: 1px solid #efefef;
+  padding: 15px 30px;
+  @media (max-width: $screen-xs-max) {
+  padding: 15px;
+  }
+}
+.red {
+	color: red;
+}
+@media (max-width: $screen-xs-max) {
+.p-textcenter {
+	text-align: center;
+	.pull-right,
+	.pull-left {
+		float: none !important;
+		margin-top: 10px;
+		margin-right: 0 !important;
+		margin-left: 0 !important;
+	}
+}
+}
+
+/* ==================================
+header
+================================== */
+header {
+	.container {
+    .row {
+    }
+	}
+	.navbar {
+		min-height: 39px;
+		font-size: 85%;
+		box-shadow: 0 2px 11px #eee;
+		background-color: rgba(255,255,255,0.95);
+		border-top: 2px solid #ffb68c;
+		border-right: none;
+		border-left: none;
+		border-radius: 0;
+		.container {
+			.navbar-collapse {
+				.navbar-nav {
+					font-size: 119%;
+					li {
+						a {
+							transition: all ease-in .1s;
+							&:hover {
+								color: #fff;
+								background-color: #dd5928;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+/* ==================================
+contents
+================================== */
+#content {
+  .container {
+    #front-page {
+      .row {
+        .col-xs-12 {
+        }
+      }
+    }
+  }
+}
+
+/* ==================================
+footer
+================================== */
+
+/* ==================================
+post
+================================== */
+#content {
+  .container {
+    .col-md-12 {
+      section {
+        h2 {
+        }
+      }
+    }
+  }
+}
+
+
+/* ==================================
+ScrollTop
+================================== */
+.scroll-to-top {
+	position: fixed;
+	bottom: 60px;
+	right: 2%;
+	width: 50px;
+	height: 50px;
+  z-index: 999;
+	vertical-align: middle;
+	text-align: center;
+	background-color: rgba(255,255,255,0.6);
+	color: #ffb68c;
+	cursor: pointer;
+	border-radius: 50%;
+	border: 2px solid #ffb68c;
+	padding-top: 15px;
+	}
+
+/* ==================================
+others
+================================== */
+.fixed {
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 99;
+}
+
+/* 見出し非表示：投稿ナビゲーション */
+.pagination h2.screen-reader-text {
+  display: none;
+}
+
+/* ==================================
+print
+================================== */
+@media print {
+  .container {
+    width:1200px; /* 適宜変更 */
+  }
+}
